@@ -1,0 +1,132 @@
+// SECTION :: START
+
+.sign {
+	position: relative;
+	padding-top: 75px;
+
+	&.sign--signin {}
+
+	&__bg {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+
+		&-illustration {
+			z-index: 1;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 127px;
+			background-image: url('../img/img-bg.png');
+			background-repeat: no-repeat;
+			background-position: bottom center;
+			background-size: cover;
+		}
+
+		&:after {
+			content: '';
+			z-index: 2;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(59,33,16,1) 0%,rgba(59,33,16,1) 75%,rgba(59,33,16,0) 100%);
+		}
+	}
+
+	&__wrapper {
+		z-index: 10;
+		position: relative;
+
+		&-1 {}
+		&-2 {
+			padding-bottom: 80px;
+		}
+		&-3 {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			padding-bottom: 5px;
+
+			> div {
+				position: relative;
+				padding-left: 15px;
+				padding-right: 15px;
+
+				&:nth-of-type(1) {
+					padding-bottom: 30px;
+				}
+			}
+
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: 20px;
+		font-size: 49px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 1.2;
+		text-align: center;
+	}
+
+	&__form {
+		min-height: 200px;
+	}
+
+	&__bookmarks {
+		position: absolute;
+		top: 27px;
+		left: 22px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		> div {
+			&:nth-of-type(1) {
+				padding: 5px;
+			}
+			&:nth-of-type(2) {
+				padding: 5px 5px 5px 0;
+			}
+
+			p {
+				font-size: 23px;
+				@extend %fontBernard;
+				color: rgb(64, 29, 0);
+				line-height: 1.2;
+				text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
+
+				> span {
+					color: #8b1200;
+				}
+			}
+
+			> span {
+				font-size: 35px;
+				@extend %fontBernard;
+				color: rgb(170, 22, 0);
+				line-height: 1.2;
+				text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
+			}
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+// SECTION :: END
