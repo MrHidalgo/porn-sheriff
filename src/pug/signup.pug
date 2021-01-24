@@ -8,4 +8,19 @@ extends shared/_layout
 block content
   div.body.body--start(class!= pageClassName)
 
+    .body__bg
+      .body__bg-illustration
+
     include components/sign/_signup
+
+    .body__wrapper
+      div
+        img(src="img/img-logo-footer.png" srcset="img/img-logo-footer@2x.png 2x" alt="")
+      div
+        img(src="img/img-bookmarks.png" srcset="img/img-bookmarks@2x.png 2x" alt="")
+        .body__bookmarks
+          div
+            img(src="img/img-bookmarks-book.png" srcset="img/img-bookmarks-book@2x.png 2x" alt="")
+          div
+            p!= "PRESS <span>CTRL+D</span> NOW TO"
+            span BOOKMARK US!

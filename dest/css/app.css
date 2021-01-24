@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.header__sign a, .header__nav a, .sign__desc, .sign__form-field.sign__form-field--link a, .sign__form button span {
+.header__sign a, .header__nav a, .sign__desc, .sign__form-field.sign__form-field--link a, .sign__form button span, .about__title {
   font-family: 'MagicMushroom', sans-serif;
 }
 
 /* line 29, src/scss/_utilities/_extend.scss */
-.sign__bookmarks > div p, .sign__bookmarks > div > span {
+.body__bookmarks > div p, .body__bookmarks > div > span {
   font-family: 'Bernard', sans-serif;
 }
 
@@ -191,6 +191,7 @@ body {
 
 /* line 38, src/scss/_shared/_main-setting-reset.scss */
 body > .body {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +211,7 @@ body > .body {
           flex: 1 0 auto;
 }
 
-/* line 44, src/scss/_shared/_main-setting-reset.scss */
+/* line 45, src/scss/_shared/_main-setting-reset.scss */
 body > .body--start {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -218,19 +219,19 @@ body > .body--start {
           justify-content: flex-start;
 }
 
-/* line 51, src/scss/_shared/_main-setting-reset.scss */
+/* line 52, src/scss/_shared/_main-setting-reset.scss */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 54, src/scss/_shared/_main-setting-reset.scss */
+/* line 55, src/scss/_shared/_main-setting-reset.scss */
 *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 61, src/scss/_shared/_main-setting-reset.scss */
+/* line 62, src/scss/_shared/_main-setting-reset.scss */
 button,
 input,
 optgroup,
@@ -240,36 +241,36 @@ textarea {
   margin: 0;
 }
 
-/* line 71, src/scss/_shared/_main-setting-reset.scss */
+/* line 72, src/scss/_shared/_main-setting-reset.scss */
 button,
 input {
   overflow: visible;
 }
 
-/* line 77, src/scss/_shared/_main-setting-reset.scss */
+/* line 78, src/scss/_shared/_main-setting-reset.scss */
 button[disabled] {
   opacity: 0.55;
   cursor: not-allowed;
 }
 
-/* line 83, src/scss/_shared/_main-setting-reset.scss */
+/* line 84, src/scss/_shared/_main-setting-reset.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-/* line 89, src/scss/_shared/_main-setting-reset.scss */
+/* line 90, src/scss/_shared/_main-setting-reset.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 95, src/scss/_shared/_main-setting-reset.scss */
+/* line 96, src/scss/_shared/_main-setting-reset.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 100, src/scss/_shared/_main-setting-reset.scss */
+/* line 101, src/scss/_shared/_main-setting-reset.scss */
 p,
 h1, h2, h3, h4, h5, h6,
 hr {
@@ -277,36 +278,36 @@ hr {
   padding: 0;
 }
 
-/* line 108, src/scss/_shared/_main-setting-reset.scss */
+/* line 109, src/scss/_shared/_main-setting-reset.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 113, src/scss/_shared/_main-setting-reset.scss */
+/* line 114, src/scss/_shared/_main-setting-reset.scss */
 ul li {
   list-style: none;
 }
 
-/* line 119, src/scss/_shared/_main-setting-reset.scss */
+/* line 120, src/scss/_shared/_main-setting-reset.scss */
 a {
   outline: none;
   text-decoration: none;
 }
 
-/* line 124, src/scss/_shared/_main-setting-reset.scss */
+/* line 125, src/scss/_shared/_main-setting-reset.scss */
 a:hover, a:focus {
   text-decoration: none;
 }
 
-/* line 131, src/scss/_shared/_main-setting-reset.scss */
+/* line 132, src/scss/_shared/_main-setting-reset.scss */
 input[type="text"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-/* line 135, src/scss/_shared/_main-setting-reset.scss */
+/* line 136, src/scss/_shared/_main-setting-reset.scss */
 picture {
   display: -webkit-box;
   display: -webkit-flex;
@@ -335,6 +336,137 @@ picture {
 /* line 26, src/scss/_shared/_grid.scss */
 .c-grid-fluid {
   max-width: 100%;
+}
+
+/* line 4, src/scss/_shared/_common.scss */
+.body__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 12, src/scss/_shared/_common.scss */
+.body__bg-illustration {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 127px;
+  background-image: url("../img/img-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 25, src/scss/_shared/_common.scss */
+.body__bg:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3b2110), color-stop(75%, #3b2110), to(rgba(59, 33, 16, 0)));
+  background: -webkit-linear-gradient(top, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
+  background: -o-linear-gradient(top, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
+  background: linear-gradient(to bottom, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
+}
+
+/* line 37, src/scss/_shared/_common.scss */
+.body__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+/* line 44, src/scss/_shared/_common.scss */
+.body__wrapper > div {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 49, src/scss/_shared/_common.scss */
+.body__wrapper > div:nth-of-type(1) {
+  padding-bottom: 30px;
+}
+
+/* line 54, src/scss/_shared/_common.scss */
+.body__wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 61, src/scss/_shared/_common.scss */
+.body__bookmarks {
+  position: absolute;
+  top: 27px;
+  left: 22px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 70, src/scss/_shared/_common.scss */
+.body__bookmarks > div:nth-of-type(1) {
+  padding: 5px;
+}
+
+/* line 73, src/scss/_shared/_common.scss */
+.body__bookmarks > div:nth-of-type(2) {
+  padding: 5px 5px 5px 0;
+}
+
+/* line 77, src/scss/_shared/_common.scss */
+.body__bookmarks > div p {
+  font-size: 23px;
+  color: #401d00;
+  line-height: 1.2;
+  text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
+}
+
+/* line 84, src/scss/_shared/_common.scss */
+.body__bookmarks > div p > span {
+  color: #8b1200;
+}
+
+/* line 89, src/scss/_shared/_common.scss */
+.body__bookmarks > div > span {
+  font-size: 35px;
+  color: #aa1600;
+  line-height: 1.2;
+  text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
+}
+
+/* line 98, src/scss/_shared/_common.scss */
+.body__bookmarks img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* line 1, src/scss/_shared/_iconFont.scss */
@@ -809,94 +941,18 @@ picture {
   padding-top: 75px;
 }
 
-/* line 9, src/scss/_components/sign/_sign.scss */
-.sign__bg {
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 17, src/scss/_components/sign/_sign.scss */
-.sign__bg-illustration {
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 127px;
-  background-image: url("../img/img-bg.png");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  -webkit-background-size: cover;
-          background-size: cover;
-}
-
-/* line 30, src/scss/_components/sign/_sign.scss */
-.sign__bg:after {
-  content: '';
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 450px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3b2110), color-stop(75%, #3b2110), to(rgba(59, 33, 16, 0)));
-  background: -webkit-linear-gradient(top, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
-  background: -o-linear-gradient(top, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
-  background: linear-gradient(to bottom, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
-}
-
-/* line 42, src/scss/_components/sign/_sign.scss */
+/* line 7, src/scss/_components/sign/_sign.scss */
 .sign__wrapper {
   z-index: 10;
   position: relative;
 }
 
-/* line 47, src/scss/_components/sign/_sign.scss */
+/* line 11, src/scss/_components/sign/_sign.scss */
 .sign__wrapper-2 {
   padding-bottom: 80px;
 }
 
-/* line 50, src/scss/_components/sign/_sign.scss */
-.sign__wrapper-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 5px;
-}
-
-/* line 56, src/scss/_components/sign/_sign.scss */
-.sign__wrapper-3 > div {
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* line 61, src/scss/_components/sign/_sign.scss */
-.sign__wrapper-3 > div:nth-of-type(1) {
-  padding-bottom: 30px;
-}
-
-/* line 66, src/scss/_components/sign/_sign.scss */
-.sign__wrapper-3 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 74, src/scss/_components/sign/_sign.scss */
+/* line 16, src/scss/_components/sign/_sign.scss */
 .sign__title {
   padding-bottom: 20px;
   font-size: 49px;
@@ -906,7 +962,7 @@ picture {
   text-align: center;
 }
 
-/* line 83, src/scss/_components/sign/_sign.scss */
+/* line 25, src/scss/_components/sign/_sign.scss */
 .sign__desc {
   width: 100%;
   max-width: 410px;
@@ -920,7 +976,7 @@ picture {
   text-align: center;
 }
 
-/* line 97, src/scss/_components/sign/_sign.scss */
+/* line 39, src/scss/_components/sign/_sign.scss */
 .sign__form {
   width: 100%;
   max-width: 410px;
@@ -928,18 +984,18 @@ picture {
   margin-right: auto;
 }
 
-/* line 103, src/scss/_components/sign/_sign.scss */
+/* line 45, src/scss/_components/sign/_sign.scss */
 .sign__form-field {
   position: relative;
   padding-bottom: 20px;
 }
 
-/* line 107, src/scss/_components/sign/_sign.scss */
+/* line 49, src/scss/_components/sign/_sign.scss */
 .sign__form-field.sign__form-field--btn {
   padding-bottom: 15px;
 }
 
-/* line 111, src/scss/_components/sign/_sign.scss */
+/* line 53, src/scss/_components/sign/_sign.scss */
 .sign__form-field.sign__form-field--link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -955,7 +1011,7 @@ picture {
           justify-content: space-between;
 }
 
-/* line 116, src/scss/_components/sign/_sign.scss */
+/* line 58, src/scss/_components/sign/_sign.scss */
 .sign__form-field.sign__form-field--link a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -969,13 +1025,13 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 124, src/scss/_components/sign/_sign.scss */
+/* line 66, src/scss/_components/sign/_sign.scss */
 .sign__form-field.sign__form-field--link a span {
   padding-left: 5px;
   color: #ffffff;
 }
 
-/* line 129, src/scss/_components/sign/_sign.scss */
+/* line 71, src/scss/_components/sign/_sign.scss */
 .sign__form-field.sign__form-field--link a:hover {
   color: #fff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -983,7 +1039,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 137, src/scss/_components/sign/_sign.scss */
+/* line 79, src/scss/_components/sign/_sign.scss */
 .sign__form label {
   position: relative;
   display: -webkit-box;
@@ -993,7 +1049,7 @@ picture {
   width: 100%;
 }
 
-/* line 143, src/scss/_components/sign/_sign.scss */
+/* line 85, src/scss/_components/sign/_sign.scss */
 .sign__form input {
   outline: none;
   position: relative;
@@ -1043,7 +1099,7 @@ picture {
   color: silver;
 }
 
-/* line 161, src/scss/_components/sign/_sign.scss */
+/* line 103, src/scss/_components/sign/_sign.scss */
 .sign__form button {
   outline: none;
   cursor: pointer;
@@ -1073,7 +1129,7 @@ picture {
   background-position: center;
 }
 
-/* line 179, src/scss/_components/sign/_sign.scss */
+/* line 121, src/scss/_components/sign/_sign.scss */
 .sign__form button:hover span {
   color: #3b2110;
   text-shadow: 2px 2px 0px rgba(255, 176, 113, 0);
@@ -1082,7 +1138,7 @@ picture {
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* line 186, src/scss/_components/sign/_sign.scss */
+/* line 128, src/scss/_components/sign/_sign.scss */
 .sign__form button span {
   color: #440000;
   font-size: 33px;
@@ -1093,58 +1149,45 @@ picture {
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* line 197, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks {
-  position: absolute;
-  top: 27px;
-  left: 22px;
+/* line 3, src/scss/_components/about/_about.scss */
+.about {
+  z-index: 2;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* line 9, src/scss/_components/about/_about.scss */
+.about__wrapper {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 45px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-image: url("../img/img-about-bg@2x.png");
+  background-repeat: repeat-y;
+  background-position: left top;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
-/* line 206, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks > div:nth-of-type(1) {
-  padding: 5px;
+/* line 19, src/scss/_components/about/_about.scss */
+.about__title {
+  padding-bottom: 20px;
+  color: #fff;
+  line-height: 1.1;
+  font-size: 40px;
 }
 
-/* line 209, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks > div:nth-of-type(2) {
-  padding: 5px 5px 5px 0;
+/* line 27, src/scss/_components/about/_about.scss */
+.about__desc {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* line 213, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks > div p {
-  font-size: 23px;
-  color: #401d00;
-  line-height: 1.2;
-  text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
-}
-
-/* line 220, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks > div p > span {
-  color: #8b1200;
-}
-
-/* line 225, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks > div > span {
-  font-size: 35px;
-  color: #aa1600;
-  line-height: 1.2;
-  text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
-}
-
-/* line 234, src/scss/_components/sign/_sign.scss */
-.sign__bookmarks img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+/* line 31, src/scss/_components/about/_about.scss */
+.about__desc:not(:last-of-type) {
+  padding-bottom: 20px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

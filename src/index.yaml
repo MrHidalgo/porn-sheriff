@@ -15,7 +15,7 @@ PageList:
   ready: 1
 - file: about.html
   titleName: About Us
-  ready: 1
+  ready: 55
 - file: category.html
   titleName: Category
   ready: 1
