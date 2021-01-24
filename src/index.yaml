@@ -3,13 +3,13 @@ ProjectTitle: SmallTMPL
 PageList:
 - file: login.html
   titleName: Login
-  ready: 1
+  ready: 55
 - file: signup.html
   titleName: Sign Up
-  ready: 1
+  ready: 55
 - file: password.html
   titleName: Forgot password
-  ready: 1
+  ready: 55
 - file: index.html
   titleName: Home
   ready: 1

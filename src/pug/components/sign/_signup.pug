@@ -8,7 +8,7 @@ section#sign.sign.sign--signin
   .c-grid
     .sign__wrapper.sign__wrapper-1
 
-      p.sign__title Login
+      p.sign__title Sign Up
 
     .sign__wrapper.sign__wrapper-2
 
@@ -19,12 +19,14 @@ section#sign.sign.sign--signin
         .sign__form-field
           label
             input(type='password' name='' placeholder='Password')
+        .sign__form-field
+          label
+            input(type='email' name='' placeholder='Email')
         .sign__form-field.sign__form-field--btn
           button(type='submit')
-            span Login
-        .sign__form-field.sign__form-field--link
-          a(href="#") Sign Up Now
-          a(href="#") Forgot Password?
+            span Join Porn Sheriff Now!
+        .sign__form-field.sign__form-field--link(style='justify-content: center;')
+          a(href="#")!= "Already Have an Account? <span>Log in now!</span>"
 
     .sign__wrapper.sign__wrapper-3
       div

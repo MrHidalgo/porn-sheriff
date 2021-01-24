@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.header__sign a, .header__nav a {
+.header__sign a, .header__nav a, .sign__desc, .sign__form-field.sign__form-field--link a, .sign__form button span {
   font-family: 'MagicMushroom', sans-serif;
 }
 
@@ -839,10 +839,10 @@ picture {
   content: '';
   z-index: 2;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 450px;
   background: -webkit-gradient(linear, left top, left bottom, from(#3b2110), color-stop(75%, #3b2110), to(rgba(59, 33, 16, 0)));
   background: -webkit-linear-gradient(top, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
   background: -o-linear-gradient(top, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
@@ -907,11 +907,193 @@ picture {
 }
 
 /* line 83, src/scss/_components/sign/_sign.scss */
-.sign__form {
-  min-height: 200px;
+.sign__desc {
+  width: 100%;
+  max-width: 410px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
 }
 
-/* line 87, src/scss/_components/sign/_sign.scss */
+/* line 97, src/scss/_components/sign/_sign.scss */
+.sign__form {
+  width: 100%;
+  max-width: 410px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 103, src/scss/_components/sign/_sign.scss */
+.sign__form-field {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+/* line 107, src/scss/_components/sign/_sign.scss */
+.sign__form-field.sign__form-field--btn {
+  padding-bottom: 15px;
+}
+
+/* line 111, src/scss/_components/sign/_sign.scss */
+.sign__form-field.sign__form-field--link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 116, src/scss/_components/sign/_sign.scss */
+.sign__form-field.sign__form-field--link a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d7af90;
+  font-size: 19px;
+  line-height: 1;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 124, src/scss/_components/sign/_sign.scss */
+.sign__form-field.sign__form-field--link a span {
+  padding-left: 5px;
+  color: #ffffff;
+}
+
+/* line 129, src/scss/_components/sign/_sign.scss */
+.sign__form-field.sign__form-field--link a:hover {
+  color: #fff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 137, src/scss/_components/sign/_sign.scss */
+.sign__form label {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+/* line 143, src/scss/_components/sign/_sign.scss */
+.sign__form input {
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: none;
+  -webkit-box-shadow: 3px 3px 1px 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 3px 3px 1px 0 rgba(0, 0, 0, 0.35);
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.sign__form input.placeholder {
+  font-size: 16px;
+  color: silver;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.sign__form input:-moz-placeholder {
+  font-size: 16px;
+  color: silver;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.sign__form input::-moz-placeholder {
+  font-size: 16px;
+  color: silver;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.sign__form input:-ms-input-placeholder {
+  font-size: 16px;
+  color: silver;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.sign__form input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: silver;
+}
+
+/* line 161, src/scss/_components/sign/_sign.scss */
+.sign__form button {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 75px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  background-image: url("../img/img-btn-bg@2x.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+
+/* line 179, src/scss/_components/sign/_sign.scss */
+.sign__form button:hover span {
+  color: #3b2110;
+  text-shadow: 2px 2px 0px rgba(255, 176, 113, 0);
+  -webkit-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* line 186, src/scss/_components/sign/_sign.scss */
+.sign__form button span {
+  color: #440000;
+  font-size: 33px;
+  line-height: 1;
+  text-shadow: 2px 2px 0px rgba(255, 176, 113, 0.75);
+  -webkit-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* line 197, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks {
   position: absolute;
   top: 27px;
@@ -927,17 +1109,17 @@ picture {
           align-items: center;
 }
 
-/* line 96, src/scss/_components/sign/_sign.scss */
+/* line 206, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks > div:nth-of-type(1) {
   padding: 5px;
 }
 
-/* line 99, src/scss/_components/sign/_sign.scss */
+/* line 209, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks > div:nth-of-type(2) {
   padding: 5px 5px 5px 0;
 }
 
-/* line 103, src/scss/_components/sign/_sign.scss */
+/* line 213, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks > div p {
   font-size: 23px;
   color: #401d00;
@@ -945,12 +1127,12 @@ picture {
   text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
 }
 
-/* line 110, src/scss/_components/sign/_sign.scss */
+/* line 220, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks > div p > span {
   color: #8b1200;
 }
 
-/* line 115, src/scss/_components/sign/_sign.scss */
+/* line 225, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks > div > span {
   font-size: 35px;
   color: #aa1600;
@@ -958,7 +1140,7 @@ picture {
   text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
 }
 
-/* line 124, src/scss/_components/sign/_sign.scss */
+/* line 234, src/scss/_components/sign/_sign.scss */
 .sign__bookmarks img {
   display: block;
   max-width: 100%;
