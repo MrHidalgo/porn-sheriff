@@ -546,10 +546,13 @@ picture {
 
 /* line 40, src/scss/_components/_header.scss */
 .header__bg-left img {
+  -webkit-transform: translateY(18px);
+      -ms-transform: translateY(18px);
+          transform: translateY(18px);
   max-height: 100%;
 }
 
-/* line 44, src/scss/_components/_header.scss */
+/* line 45, src/scss/_components/_header.scss */
 .header__bg-middle {
   z-index: 1;
   display: -webkit-box;
@@ -566,13 +569,13 @@ picture {
           justify-content: center;
 }
 
-/* line 50, src/scss/_components/_header.scss */
+/* line 51, src/scss/_components/_header.scss */
 .header__bg-middle img {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 55, src/scss/_components/_header.scss */
+/* line 56, src/scss/_components/_header.scss */
 .header__bg-right {
   z-index: 3;
   display: -webkit-box;
@@ -585,7 +588,7 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 60, src/scss/_components/_header.scss */
+/* line 61, src/scss/_components/_header.scss */
 .header__bg-right > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -610,14 +613,14 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 72, src/scss/_components/_header.scss */
+/* line 73, src/scss/_components/_header.scss */
 .header__bg img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 79, src/scss/_components/_header.scss */
+/* line 80, src/scss/_components/_header.scss */
 .header__sign {
   overflow: hidden;
   position: relative;
@@ -642,7 +645,7 @@ picture {
   background-position: center;
 }
 
-/* line 94, src/scss/_components/_header.scss */
+/* line 95, src/scss/_components/_header.scss */
 .header__sign a {
   white-space: nowrap;
   display: -webkit-box;
@@ -673,7 +676,7 @@ picture {
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* line 110, src/scss/_components/_header.scss */
+/* line 111, src/scss/_components/_header.scss */
 .header__sign a:hover {
   color: #3b2110;
   text-shadow: 2px 2px 0px rgba(255, 176, 113, 0);
@@ -682,7 +685,7 @@ picture {
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* line 117, src/scss/_components/_header.scss */
+/* line 118, src/scss/_components/_header.scss */
 .header__sign span {
   width: 2px;
   height: 100%;
@@ -692,7 +695,7 @@ picture {
   background: linear-gradient(to bottom, rgba(68, 0, 0, 0) 0%, #440000 50%, rgba(68, 0, 0, 0) 100%);
 }
 
-/* line 124, src/scss/_components/_header.scss */
+/* line 125, src/scss/_components/_header.scss */
 .header__search {
   position: relative;
   display: -webkit-box;
@@ -705,7 +708,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 132, src/scss/_components/_header.scss */
+/* line 133, src/scss/_components/_header.scss */
 .header__search label {
   position: relative;
   display: -webkit-box;
@@ -715,7 +718,7 @@ picture {
   width: 100%;
 }
 
-/* line 138, src/scss/_components/_header.scss */
+/* line 139, src/scss/_components/_header.scss */
 .header__search input {
   outline: none;
   position: relative;
@@ -761,7 +764,7 @@ picture {
   color: silver;
 }
 
-/* line 155, src/scss/_components/_header.scss */
+/* line 156, src/scss/_components/_header.scss */
 .header__search .icon-font {
   position: absolute;
   top: 0;
@@ -783,7 +786,7 @@ picture {
   color: #000000;
 }
 
-/* line 168, src/scss/_components/_header.scss */
+/* line 169, src/scss/_components/_header.scss */
 .header__wanted {
   display: -webkit-box;
   display: -webkit-flex;
@@ -801,7 +804,7 @@ picture {
   max-height: 100%;
 }
 
-/* line 175, src/scss/_components/_header.scss */
+/* line 176, src/scss/_components/_header.scss */
 .header__wanted img {
   display: block;
   max-width: 100%;
@@ -811,7 +814,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 185, src/scss/_components/_header.scss */
+/* line 186, src/scss/_components/_header.scss */
 .header__nav {
   position: absolute;
   left: 0;
@@ -840,7 +843,7 @@ picture {
   background-position: center;
 }
 
-/* line 200, src/scss/_components/_header.scss */
+/* line 201, src/scss/_components/_header.scss */
 .header__nav a {
   position: relative;
   display: -webkit-box;
@@ -868,7 +871,7 @@ picture {
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* line 216, src/scss/_components/_header.scss */
+/* line 217, src/scss/_components/_header.scss */
 .header__nav a:hover {
   color: #3b2110;
   text-shadow: 2px 2px 0px rgba(255, 176, 113, 0);
