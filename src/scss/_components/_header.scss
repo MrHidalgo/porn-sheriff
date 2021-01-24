@@ -54,12 +54,131 @@
 		}
 		&-right {
 			z-index: 3;
+			display: flex;
+			justify-content: flex-end;
+
+			> div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				max-width: 200px;
+				padding-top: 5px;
+				padding-bottom: 30px;
+			}
 		}
 
 		img {
 			display: block;
 			max-width: 100%;
 			height: auto;
+		}
+	}
+
+	&__sign {
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 115px;
+		height: 22px;
+		margin-bottom: 5px;
+		border-radius: 2rem;
+		background-color: #ffffff;
+		background-image: url('../img/img-header-nav-bg@2x.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		a {
+			white-space: nowrap;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+			height: 100%;
+			color: #000000;
+			@extend %fontMagicMushroom;
+			text-transform: uppercase;
+			font-size: 13px;
+			text-shadow: 1px 1px 0px rgba(255, 176, 113, 0.75);
+			@include transition(color, text-shadow);
+
+			&:hover {
+				color: #3b2110;
+				text-shadow: 2px 2px 0px rgba(255, 176, 113, 0);
+				@include transition(color, text-shadow);
+			}
+		}
+
+		span {
+			width: 2px;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(68,0,0,0) 0%,rgba(68,0,0,1) 50%,rgba(68,0,0,0) 100%);
+		}
+	}
+
+	&__search {
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 185px;
+		margin-left: auto;
+		margin-right: auto;
+
+		label {
+			position: relative;
+			display: flex;
+			width: 100%;
+		}
+
+		input {
+			outline: none;
+			position: relative;
+			width: 100%;
+			height: 35px;
+			padding: 0 30px 0 10px;
+			border: none;
+			box-shadow: 3px 3px 1px 0 rgba(#000, 0.35);
+			border-radius: 2px;
+			background-color: #ffffff;
+			font-size: 12px;
+			@include inputPlaceholder {
+				font-size: 12px;
+				color: silver;
+			}
+		}
+
+		.icon-font {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 100%;
+			color: #000000;
+		}
+	}
+
+	&__wanted {
+		display: flex;
+		align-items: flex-start;
+		flex: 1;
+		min-height: 1px;
+		max-height: 100%;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
