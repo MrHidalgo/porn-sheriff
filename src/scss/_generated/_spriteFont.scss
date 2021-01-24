@@ -27,8 +27,14 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == search {
+	@if $filename == right-chevron {
 		$char: "\E001";
+	}
+	@if $filename == search {
+		$char: "\E002";
+	}
+	@if $filename == zoom-in {
+		$char: "\E003";
 	}
 
 	@return $char;
@@ -45,7 +51,15 @@
 	}
 }
 
+.icon-right-chevron {
+	@include icon(right-chevron);
+
+}
 .icon-search {
 	@include icon(search);
+
+}
+.icon-zoom-in {
+	@include icon(zoom-in);
 
 }

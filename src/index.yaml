@@ -12,7 +12,7 @@ PageList:
   ready: 55
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 55
 - file: about.html
   titleName: About Us
   ready: 55

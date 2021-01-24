@@ -1,0 +1,28 @@
+// SECTION :: START
+
+.faq {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	&__content {
+		padding-bottom: 50px;
+
+		p {
+			padding-bottom: 15px;
+			color: #f8d27e;
+			font-size: 21px;
+			font-weight: 700;
+		}
+
+		span {
+			color: #ffffff;
+			font-size: 16px;
+
+			&:not(:last-of-type) {
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+// SECTION :: END

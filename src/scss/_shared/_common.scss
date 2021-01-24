@@ -1,6 +1,9 @@
 // COMMON :: START
 
 .body {
+	overflow: hidden;
+	position: relative;
+
 	&__bg {
 		z-index: 0;
 		position: absolute;

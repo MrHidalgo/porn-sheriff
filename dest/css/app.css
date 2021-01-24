@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.header__sign a, .header__nav a, .sign__desc, .sign__form-field.sign__form-field--link a, .sign__form button span, .about__title {
+.header__sign a, .header__nav a, .sign__desc, .sign__form-field.sign__form-field--link a, .sign__form button span, .about__title, .main__block-head p {
   font-family: 'MagicMushroom', sans-serif;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-search:before {
+.icon-right-chevron:before, .icon-search:before, .icon-zoom-in:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,9 +32,19 @@ body {
   text-transform: none;
 }
 
-/* line 38, src/scss/_generated/_spriteFont.scss */
-.icon-search:before {
+/* line 44, src/scss/_generated/_spriteFont.scss */
+.icon-right-chevron:before {
   content: "";
+}
+
+/* line 44, src/scss/_generated/_spriteFont.scss */
+.icon-search:before {
+  content: "";
+}
+
+/* line 44, src/scss/_generated/_spriteFont.scss */
+.icon-zoom-in:before {
+  content: "";
 }
 
 @font-face {
@@ -338,7 +348,13 @@ picture {
   max-width: 100%;
 }
 
-/* line 4, src/scss/_shared/_common.scss */
+/* line 3, src/scss/_shared/_common.scss */
+.body {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 7, src/scss/_shared/_common.scss */
 .body__bg {
   z-index: 0;
   position: absolute;
@@ -348,7 +364,7 @@ picture {
   height: 100%;
 }
 
-/* line 12, src/scss/_shared/_common.scss */
+/* line 15, src/scss/_shared/_common.scss */
 .body__bg-illustration {
   z-index: 1;
   position: absolute;
@@ -363,7 +379,7 @@ picture {
           background-size: cover;
 }
 
-/* line 25, src/scss/_shared/_common.scss */
+/* line 28, src/scss/_shared/_common.scss */
 .body__bg:after {
   content: '';
   z-index: 2;
@@ -378,7 +394,7 @@ picture {
   background: linear-gradient(to bottom, #3b2110 0%, #3b2110 75%, rgba(59, 33, 16, 0) 100%);
 }
 
-/* line 37, src/scss/_shared/_common.scss */
+/* line 40, src/scss/_shared/_common.scss */
 .body__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -396,26 +412,26 @@ picture {
   padding-bottom: 5px;
 }
 
-/* line 44, src/scss/_shared/_common.scss */
+/* line 47, src/scss/_shared/_common.scss */
 .body__wrapper > div {
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 49, src/scss/_shared/_common.scss */
+/* line 52, src/scss/_shared/_common.scss */
 .body__wrapper > div:nth-of-type(1) {
   padding-bottom: 30px;
 }
 
-/* line 54, src/scss/_shared/_common.scss */
+/* line 57, src/scss/_shared/_common.scss */
 .body__wrapper img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 61, src/scss/_shared/_common.scss */
+/* line 64, src/scss/_shared/_common.scss */
 .body__bookmarks {
   position: absolute;
   top: 27px;
@@ -431,17 +447,17 @@ picture {
           align-items: center;
 }
 
-/* line 70, src/scss/_shared/_common.scss */
+/* line 73, src/scss/_shared/_common.scss */
 .body__bookmarks > div:nth-of-type(1) {
   padding: 5px;
 }
 
-/* line 73, src/scss/_shared/_common.scss */
+/* line 76, src/scss/_shared/_common.scss */
 .body__bookmarks > div:nth-of-type(2) {
   padding: 5px 5px 5px 0;
 }
 
-/* line 77, src/scss/_shared/_common.scss */
+/* line 80, src/scss/_shared/_common.scss */
 .body__bookmarks > div p {
   font-size: 23px;
   color: #401d00;
@@ -449,12 +465,12 @@ picture {
   text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
 }
 
-/* line 84, src/scss/_shared/_common.scss */
+/* line 87, src/scss/_shared/_common.scss */
 .body__bookmarks > div p > span {
   color: #8b1200;
 }
 
-/* line 89, src/scss/_shared/_common.scss */
+/* line 92, src/scss/_shared/_common.scss */
 .body__bookmarks > div > span {
   font-size: 35px;
   color: #aa1600;
@@ -462,7 +478,7 @@ picture {
   text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
 }
 
-/* line 98, src/scss/_shared/_common.scss */
+/* line 101, src/scss/_shared/_common.scss */
 .body__bookmarks img {
   display: block;
   max-width: 100%;
@@ -1187,6 +1203,297 @@ picture {
 
 /* line 31, src/scss/_components/about/_about.scss */
 .about__desc:not(:last-of-type) {
+  padding-bottom: 20px;
+}
+
+/* line 3, src/scss/_components/homepage/_main.scss */
+.main {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* line 7, src/scss/_components/homepage/_main.scss */
+.main__block {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-border-radius: 10px 10px 0 0;
+          border-radius: 10px 10px 0 0;
+  background-color: #ffd9b2;
+}
+
+/* line 16, src/scss/_components/homepage/_main.scss */
+.main__block-wrapper {
+  position: relative;
+  left: -10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/* line 22, src/scss/_components/homepage/_main.scss */
+.main__block-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc(100% / 4);
+  max-width: calc(100% / 4);
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+/* line 30, src/scss/_components/homepage/_main.scss */
+.main__block-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  padding: 5px 10px;
+  background-image: url("../img/img-btn-bg@2x.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+
+/* line 41, src/scss/_components/homepage/_main.scss */
+.main__block-head p {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  font-size: 22px;
+  color: #240000;
+  line-height: 1;
+  text-shadow: 0px 3px 0px rgba(255, 176, 113, 0.004);
+}
+
+/* line 53, src/scss/_components/homepage/_main.scss */
+.main__block-body {
+  padding: 10px;
+}
+
+/* line 57, src/scss/_components/homepage/_main.scss */
+.main__block-footer {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+}
+
+/* line 64, src/scss/_components/homepage/_main.scss */
+.main__block-footer:before {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(68, 0, 0, 0)), color-stop(50%, #440000), to(rgba(68, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(68, 0, 0, 0) 0%, #440000 50%, rgba(68, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgba(68, 0, 0, 0) 0%, #440000 50%, rgba(68, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(68, 0, 0, 0) 0%, #440000 50%, rgba(68, 0, 0, 0) 100%);
+}
+
+/* line 75, src/scss/_components/homepage/_main.scss */
+.main__block-footer a {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+}
+
+/* line 83, src/scss/_components/homepage/_main.scss */
+.main__block-footer a span {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* line 90, src/scss/_components/homepage/_main.scss */
+.main__block-footer a .icon-font {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+/* line 97, src/scss/_components/homepage/_main.scss */
+.main__block-desc {
+  padding-bottom: 12px;
+  font-size: 12px;
+}
+
+/* line 102, src/scss/_components/homepage/_main.scss */
+.main__block-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 106, src/scss/_components/homepage/_main.scss */
+.main__block-list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 110, src/scss/_components/homepage/_main.scss */
+.main__block-list a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #004f81;
+  min-height: 25px;
+}
+
+/* line 117, src/scss/_components/homepage/_main.scss */
+.main__block-list a.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* line 123, src/scss/_components/homepage/_main.scss */
+.main__block-list a > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 40px;
+  padding-right: 5px;
+}
+
+/* line 130, src/scss/_components/homepage/_main.scss */
+.main__block-list a > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 135, src/scss/_components/homepage/_main.scss */
+.main__block-list a > div:nth-of-type(3) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 20px;
+}
+
+/* line 143, src/scss/_components/homepage/_main.scss */
+.main__block-list a img {
+  display: block;
+  max-width: 20px;
+  height: auto;
+}
+
+/* line 149, src/scss/_components/homepage/_main.scss */
+.main__block-list a p {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+/* line 3, src/scss/_components/homepage/_faq.scss */
+.faq {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* line 7, src/scss/_components/homepage/_faq.scss */
+.faq__content {
+  padding-bottom: 50px;
+}
+
+/* line 10, src/scss/_components/homepage/_faq.scss */
+.faq__content p {
+  padding-bottom: 15px;
+  color: #f8d27e;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* line 17, src/scss/_components/homepage/_faq.scss */
+.faq__content span {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* line 21, src/scss/_components/homepage/_faq.scss */
+.faq__content span:not(:last-of-type) {
   padding-bottom: 20px;
 }
 
