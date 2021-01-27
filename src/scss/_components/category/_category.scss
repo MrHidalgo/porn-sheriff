@@ -1,0 +1,51 @@
+// SECTION :: START
+
+.category {
+	&__block {
+		position: relative;
+		display: flex;
+		height: 100%;
+		max-height: 636px;
+		border-radius: 10px;
+		background-image: url('../img/img-about-bg@2x.png');
+		background-repeat: repeat-y;
+		background-position: left top;
+		background-size: cover;
+
+		> div {
+			overflow-y: auto;
+			padding: 30px;
+
+			p {
+				color: #ffffff;
+				font-size: 16px;
+
+				&:not(:last-of-type) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		&-wrapper {
+			display: flex;
+
+			> div {
+				width: 50%;
+
+				&:nth-of-type(2) {
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+
+	.review__category {
+		&-wrapper {
+			> div {
+				max-width: calc(100% / 2);
+			}
+		}
+	}
+}
+
+// SECTION :: END

@@ -1,4 +1,4 @@
-ProjectTitle: SmallTMPL
+ProjectTitle: Porn Sheriff
 
 PageList:
 - file: login.html
@@ -18,7 +18,7 @@ PageList:
   ready: 55
 - file: category.html
   titleName: Category
-  ready: 1
+  ready: 55
 - file: review.html
   titleName: Review
-  ready: 1
+  ready: 55
