@@ -264,9 +264,20 @@
 			position: relative;
 			width: 100%;
 			height: 130px;
+			border-radius: 8px 8px 0 0;
+
+			&:hover {
+				img {
+					transform: scale(1.05);
+					@include transition(transform 0.55s);
+				}
+			}
 
 			img {
 				@extend %imageResCoverAbs;
+				transform-origin: center;
+				backface-visibility: hidden;
+				@include transition(transform 0.45s);
 			}
 		}
 
