@@ -1,6 +1,7 @@
 // HEADER :: START
 
 .header {
+	position: relative;
 	background-image: url('../img/img-bg.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -193,19 +194,28 @@
 	}
 
 	&__nav {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 54px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		height: 54px;
+		margin-left: auto;
+		margin-right: auto;
 		transform: translateY(50%);
 		background-image: url('../img/img-header-nav-bg@2x.png');
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		background-position: center;
+
+		&-wrapper {
+			z-index: 99;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
 		a {
 			position: relative;
@@ -222,6 +232,20 @@
 			line-height: 1;
 			text-shadow: 2px 2px 0px rgba(255, 176, 113, 0.75);
 			@include transition(color, text-shadow);
+			@include adaptive(1279) {
+				margin-left: 5px;
+				margin-right: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 30px;
+			}
+			@include adaptive(1023) {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 25px;
+			}
 
 			&:hover {
 				color: #3b2110;
