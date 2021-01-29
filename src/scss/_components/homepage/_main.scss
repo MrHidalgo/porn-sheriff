@@ -18,12 +18,22 @@
 			left: -10px;
 			display: flex;
 			flex-wrap: wrap;
+			@include adaptive(767) {
+				left: 0;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc(100% / 4);
 				padding-left: 10px;
 				padding-bottom: 20px;
+				@include adaptive(1279) {
+					max-width: calc(100% / 3);
+				}
+				@include adaptive(767) {
+					padding-left: 0;
+					max-width: 100%;
+				}
 			}
 		}
 

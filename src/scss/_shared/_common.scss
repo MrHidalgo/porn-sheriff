@@ -52,6 +52,12 @@
 			&:nth-of-type(1) {
 				padding-bottom: 30px;
 			}
+			&:nth-of-type(2) {
+				padding-bottom: 30px;
+				@include adaptive(767) {
+					display: none;
+				}
+			}
 		}
 
 		img {
@@ -83,6 +89,9 @@
 				color: rgb(64, 29, 0);
 				line-height: 1.2;
 				text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
+				@include adaptive(767) {
+					font-size: 21px;
+				}
 
 				> span {
 					color: #8b1200;
@@ -95,6 +104,9 @@
 				color: rgb(170, 22, 0);
 				line-height: 1.2;
 				text-shadow: 0px 1px 0px rgba(255, 192, 132, 0.004);
+				@include adaptive(767) {
+					font-size: 31px;
+				}
 			}
 		}
 

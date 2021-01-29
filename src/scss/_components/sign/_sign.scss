@@ -20,6 +20,9 @@
 		font-weight: bold;
 		line-height: 1.2;
 		text-align: center;
+		@include adaptive(767) {
+			font-size: 36px;
+		}
 	}
 
 	&__desc {
@@ -34,6 +37,9 @@
 		line-height: 1.2;
 		@extend %fontMagicMushroom;
 		text-align: center;
+		@include adaptive(767) {
+			font-size: 15px;
+		}
 	}
 
 	&__form {
@@ -62,6 +68,9 @@
 					font-size: 19px;
 					line-height: 1;
 					@include transition(color);
+					@include adaptive(767) {
+						font-size: 16px;
+					}
 
 					span {
 						padding-left: 5px;
@@ -116,6 +125,9 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+			@include adaptive(767) {
+				height: 65px;
+			}
 
 			&:hover {
 				span {
@@ -132,6 +144,9 @@
 				line-height: 1;
 				text-shadow: 2px 2px 0px rgba(255, 176, 113, 0.75);
 				@include transition(color, text-shadow);
+				@include adaptive(767) {
+					font-size: 28px;
+				}
 			}
 		}
 	}

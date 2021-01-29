@@ -3,6 +3,9 @@
 .footer {
 	padding-top: 31px;
 	padding-bottom: 140px;
+	@include adaptive(767) {
+		padding-bottom: 100px;
+	}
 
 	&__wrapper {
 		width: 100%;
@@ -28,6 +31,9 @@
 		span {
 			font-size: 16px;
 			color: #ababab;
+			@include adaptive(767) {
+				font-size: 14px;
+			}
 		}
 
 		a {
@@ -49,6 +55,9 @@
 		text-align: center;
 		font-size: 16px;
 		color: #ababab;
+		@include adaptive(767) {
+			font-size: 14px;
+		}
 	}
 }
 

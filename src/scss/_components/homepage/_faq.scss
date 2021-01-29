@@ -12,14 +12,24 @@
 			color: #f8d27e;
 			font-size: 21px;
 			font-weight: 700;
+			@include adaptive(767) {
+				padding-bottom: 10px;
+				font-size: 18px;
+			}
 		}
 
 		span {
 			color: #ffffff;
 			font-size: 16px;
+			@include adaptive(767) {
+				font-size: 14px;
+			}
 
 			&:not(:last-of-type) {
 				padding-bottom: 20px;
+				@include adaptive(767) {
+					padding-bottom: 15px;
+				}
 			}
 		}
 	}

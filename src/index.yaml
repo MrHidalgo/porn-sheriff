@@ -3,22 +3,22 @@ ProjectTitle: Porn Sheriff
 PageList:
 - file: login.html
   titleName: Login
-  ready: 55
+  ready: 75
 - file: signup.html
   titleName: Sign Up
-  ready: 55
+  ready: 75
 - file: password.html
   titleName: Forgot password
-  ready: 55
+  ready: 75
 - file: index.html
   titleName: Home
-  ready: 55
+  ready: 75
 - file: about.html
   titleName: About Us
-  ready: 55
+  ready: 75
 - file: category.html
   titleName: Category
-  ready: 55
+  ready: 75
 - file: review.html
   titleName: Review
-  ready: 55
+  ready: 75

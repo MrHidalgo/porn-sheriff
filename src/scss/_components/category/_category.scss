@@ -11,6 +11,9 @@
 		background-repeat: repeat-y;
 		background-position: left top;
 		background-size: cover;
+		@include adaptive(1023) {
+			max-height: 400px;
+		}
 
 		> div {
 			overflow-y: auto;
@@ -28,12 +31,22 @@
 
 		&-wrapper {
 			display: flex;
+			@include adaptive(1023) {
+				flex-direction: column-reverse;
+			}
 
 			> div {
 				width: 50%;
+				@include adaptive(1023) {
+					width: 100%;
+				}
 
 				&:nth-of-type(2) {
 					padding-left: 10px;
+					@include adaptive(1023) {
+						padding-left: 0;
+						padding-bottom: 40px;
+					}
 				}
 			}
 		}
@@ -43,6 +56,12 @@
 		&-wrapper {
 			> div {
 				max-width: calc(100% / 2);
+				@include adaptive(1023) {
+					max-width: calc(100% / 4);
+				}
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 	}

@@ -14,6 +14,9 @@
 		background-repeat: repeat-y;
 		background-position: left top;
 		background-size: cover;
+		@include adaptive(767) {
+			padding: 20px;
+		}
 	}
 
 	&__title {
@@ -22,6 +25,9 @@
 		color: #fff;
 		line-height: 1.1;
 		font-size: 40px;
+		@include adaptive(767) {
+			font-size: 35px;
+		}
 	}
 
 	&__desc {
@@ -30,6 +36,9 @@
 		line-height: 1.6;
 		&:not(:last-of-type) {
 			padding-bottom: 20px;
+		}
+		@include adaptive(767) {
+			font-size: 14px;
 		}
 	}
 }
