@@ -26,4 +26,5 @@ const initNative = () => {
 
 window.addEventListener('load', (ev) => {
 	initNative();
+	initHamburger();
 }, false);
